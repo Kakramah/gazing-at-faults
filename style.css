@@ -629,8 +629,10 @@ figcaption {
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 1.2rem;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .social-links a {
@@ -638,16 +640,26 @@ figcaption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  transition: color 250ms ease;
+  border: 1px solid var(--color-border);
+  transition: color 250ms ease, border-color 250ms ease;
 }
 
 .social-links svg {
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.social-links svg:not([fill="none"]) {
   fill: currentColor;
+}
+
+.social-links svg[fill="none"] {
+  fill: none;
+  stroke: currentColor;
 }
 
 .copyright {
@@ -875,6 +887,7 @@ dialog::backdrop {
   
   .social-links a:hover {
     color: var(--color-rust);
+    border-color: var(--color-rust);
   }
   
   .dialog-close:hover {
